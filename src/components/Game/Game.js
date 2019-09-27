@@ -62,7 +62,7 @@ class Game extends Component {
             answer: ""
           });
           if (res.data.message === "You won...") {
-            alert("You Won Game");
+            alert("You Won The Game");
             this.props.history.push("/games");
           }
         }
