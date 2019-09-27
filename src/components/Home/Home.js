@@ -35,7 +35,6 @@ class Home extends Component {
         }
       })
       .then(res => {
-        console.log(res);
         this.setState({
           games: res.data.games
         });

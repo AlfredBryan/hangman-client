@@ -36,6 +36,7 @@ class CustomNav extends React.Component {
         }
       })
       .then(res => {
+        console.log(res);
         if (res.status === 200) {
           this.setState({
             profile: res.data.profile

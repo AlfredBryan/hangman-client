@@ -54,7 +54,6 @@ class Game extends Component {
         }
       )
       .then(res => {
-        console.log(res);
         if (res.status === 200) {
           this.fetchGame();
           this.setState({

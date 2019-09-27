@@ -28,7 +28,6 @@ class Login extends Component {
     axios
       .post("https://word-gues-game.herokuapp.com/api/v1/login", { username, password })
       .then(res => {
-        console.log(res);
         if (res.status === 200) {
           this.setState({
             loading: false
