@@ -69,7 +69,11 @@ class Game extends Component {
   };
 
   componentDidMount() {
-    this.fetchGame();
+    this.timer = setInterval(() => this.fetchGame(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
 
   render() {

@@ -115,8 +115,13 @@ class Home extends Component {
   };
 
   componentDidMount() {
-    this.fetchGames();
-    this.assignedGames();
+    this.timer = setInterval(() => this.fetchGames(), 1000);
+    this.update = setInterval(() => this.assignedGames(), 1000);
+  }
+
+  componentWillMount() {
+    clearInterval(this.timer);
+    clearInterval(this.update);
   }
 
   render() {
